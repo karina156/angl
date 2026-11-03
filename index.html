@@ -1,4 +1,4 @@
-<!doctype html><html lang="ru"><head><meta charset=utf8><script src="./firebase-config.js"></script><script src="./shim.js"></script><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="ru"><head><meta charset=utf8><script src="./shim.js"></script><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Путь к IELTS 7.5</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="google" content="notranslate">
@@ -3242,7 +3242,7 @@ function save(){
   try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){}
   if(docRef){ clearTimeout(saveTimer); saveTimer = setTimeout(()=>{ docRef.set({v:1, state:JSON.stringify(S), at:Date.now()}).then(()=>setSync(true)).catch(()=>setSync(false)); }, 1200); }
 }
-function setSync(ok){ const el = document.getElementById("sync"); el.textContent = ok ? "Прогресс в аккаунте" : "Сохранено в этом браузере"; el.title = ok ? "Прогресс сохраняется в вашем аккаунте Google и виден на любом устройстве" : "Прогресс хранится только в этом браузере. Сохраняйте резервную копию на странице «Прогресс»."; }
+function setSync(ok){ const el = document.getElementById("sync"); el.textContent = ok ? "Прогресс сохраняется" : "Сохранено в этом браузере"; el.title = ok ? "Прогресс сохраняется в зашифрованном виде на GitHub и виден на любом устройстве" : "Прогресс хранится только в этом браузере. Сохраняйте резервную копию на странице «Прогресс»."; }
 // Without an account copy, remind about a backup once a week.
 function backupNag(){
   if(docRef || !Object.keys(S.done||{}).length) return "";
